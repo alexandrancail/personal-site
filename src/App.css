@@ -1,0 +1,53 @@
+:root {
+  /* Color palette options 
+      generated with Coolors */
+
+  /* Color palette option 1 */
+  --palette1-green: #B4EDD2;
+  --palette1-blue: #A0CFD3;
+  --palette1-indigo: #8D94BA;
+  --palette1-purple: #9A7AA0;
+  --palette1-brown: #87677B;
+
+  /* Color palette option 2 */
+  --palette2-brown: #433A3F;
+  --palette2-blue: #3D5A6C;
+  --palette2-sage: #72A98F;
+  --palette2-lime: #8DE969;
+  --palette2-yellow: #CBEF43;
+
+  /* Color palette option 3 */
+  --palette3-white: #FFFFFA;
+  --palette3-teal0: #0D5C63;
+  --palette3-teal2:#44A1A0;
+  --palette3-powderblue: #78CDD7;
+  --palette3-teal1: #247B7B;
+
+  /* General-purpose colors to use throughout app */
+  --background-color: var(--palette3-teal0);
+  --heading-color: var(--palette3-powderblue);
+  --text-color: var(--palette3-white);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: var(--palette3-teal1);
+}
+
+#navbar .page-link {
+  padding: 20px;
+  color: var(--palette3-white);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#navbar .page-link:hover {
+  background-color: var(--palette3-teal0);
+}

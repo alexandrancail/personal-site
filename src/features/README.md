@@ -1,0 +1,1 @@
+This folder contains components which are feature-specific and sorted into the proper subfolders.
