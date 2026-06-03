@@ -41,6 +41,12 @@ body {
   background-color: var(--palette3-teal1);
 }
 
+/* Add an underline to a page link if it 
+   is the page that is currently open */
+#navbar .current-pg {
+  text-decoration: underline !important;
+}
+
 #navbar .page-link {
   padding: 20px;
   color: var(--palette3-white);

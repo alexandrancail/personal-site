@@ -1,6 +1,9 @@
 function About() {
     return(
-        <>About page</>
+        <>
+            Alex Cail
+            <hr />
+        </>
     )
 }
 

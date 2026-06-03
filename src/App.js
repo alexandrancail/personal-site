@@ -3,18 +3,17 @@ import './App.css';
 import NavBar from './components/NavBar';
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import pages from './app/Pages';
+import { pages } from './app/Pages';
 
 function App() {
-  // Revisit this logic - might cause problems later on...
-  // Router should change the value of this??? Is this possible...
-  const [isHomepage, setIsHomepage] = useState(true);
-
   return (
     <BrowserRouter>
       <div className="App">
-        <NavBar isHomepage={isHomepage}/>
+        {/* Navigation bar */}
+        <NavBar />
       </div>
+      {/* Router that serves up different page components when different
+          paths are accessed (see Navbar for page link buttons) */}
       <Routes>
         {pages.map(page => {
           return <Route path={page["path"]} element={page["element"]}/>
