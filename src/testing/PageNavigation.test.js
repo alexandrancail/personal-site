@@ -26,5 +26,5 @@ test("All elements in pages data structure are formatted appropriately.", () => 
 // TODO: Test that clicking on Home -> takes you to homepage
     // Test that "Home" link does not appear
 
-// TODO: Test that clicking on About -> takes you to homepage
-    // Test that "About" link is underlined
+// TODO: Test that clicking on Resume -> takes you to homepage
+    // Test that "Resume" link is underlined

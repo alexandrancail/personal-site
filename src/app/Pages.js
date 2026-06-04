@@ -1,5 +1,5 @@
 import Home from "../features/pages/Home";
-import About from "../features/pages/About";
+import Resume from "../features/pages/Resume";
 
 // Data about the application homepage
 const homepage = {
@@ -12,9 +12,9 @@ const homepage = {
 const pages = [
     homepage,
     {
-        "name": "About",
-        "path": "/about",
-        "element": <About />
+        "name": "Resume",
+        "path": "/resume",
+        "element": <Resume />
     }
 ]
 

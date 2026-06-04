@@ -1,9 +1,8 @@
 // import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
-import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { pages } from './app/Pages';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { pages, homepage } from './app/Pages';
 
 function App() {
   return (
@@ -18,6 +17,9 @@ function App() {
         {pages.map(page => {
           return <Route path={page["path"]} element={page["element"]}/>
         })}
+        {/* If a user tries to visit a nonexistent path,
+            redirect them to the homepage */}
+        <Route path="*" element={<Navigate to={homepage["path"]} replace />}/>
       </Routes>
     </BrowserRouter>
   );
