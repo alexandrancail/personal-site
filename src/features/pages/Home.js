@@ -1,7 +1,9 @@
 // Home page of the app.
 function Home() {
     return(
-        <>Home page</>
+        <div id="home" className="page">
+            <h1 id="large-name">alex cail</h1>
+        </div>
     )
 }
 

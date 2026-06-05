@@ -12,19 +12,32 @@ function NavBar() {
         return currentPath === otherPath;
     }
 
+    // Returns true if the current page is the app homepage.
+    function isHomepage() {
+        return isCurrentPath(homepage["path"]);
+    }
+
     return(
         <nav id="navbar">
-            {pages.map(page => {
-                return page["name"] === homepage["name"] && isCurrentPath(homepage["path"]) ?
-                    (<></>)
-                    : (<a 
-                        // Style button specifically if it is the currently open page
-                        className={`page-link ${isCurrentPath(page["path"]) ? ("current-pg") : ("")}`}
-                        href={page["path"]}
-                        >
-                            {page["name"]}
-                        </a>)
-            })}
+            <a id="smaller-name" href={homepage["path"]}>
+                {/* Only show name in navbar if we're not on homepage */}
+                <h1 style={isHomepage() ? ({visibility: "hidden"}) : ({})}>
+                    alex cail
+                </h1>
+            </a>
+            <div id="menu">
+                {pages.map(page => {
+                    return page["name"] === homepage["name"] && isHomepage() ?
+                        (<></>)
+                        : (<a 
+                            // Style button specifically if it is the currently open page
+                            className={`page-link ${isCurrentPath(page["path"]) ? ("current-pg") : ("")}`}
+                            href={page["path"]}
+                            >
+                                {page["name"]}
+                            </a>)
+                })}
+            </div>
         </nav>
     )
 }

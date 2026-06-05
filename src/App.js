@@ -7,20 +7,20 @@ import { pages, homepage } from './app/Pages';
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div id="app">
         {/* Navigation bar */}
         <NavBar />
-      </div>
-      {/* Router that serves up different page components when different
+        {/* Router that serves up different page components when different
           paths are accessed (see Navbar for page link buttons) */}
-      <Routes>
-        {pages.map(page => {
-          return <Route path={page["path"]} element={page["element"]}/>
-        })}
-        {/* If a user tries to visit a nonexistent path,
-            redirect them to the homepage */}
-        <Route path="*" element={<Navigate to={homepage["path"]} replace />}/>
-      </Routes>
+        <Routes>
+          {pages.map(page => {
+            return <Route path={page["path"]} element={page["element"]}/>
+          })}
+          {/* If a user tries to visit a nonexistent path,
+              redirect them to the homepage */}
+          <Route path="*" element={<Navigate to={homepage["path"]} replace />}/>
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }
