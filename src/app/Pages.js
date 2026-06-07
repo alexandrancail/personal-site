@@ -1,5 +1,5 @@
-import Home from "../features/pages/Home";
-import Resume from "../features/pages/Resume";
+import Home from "../features/Home";
+import Resume from "../features/resume/Resume";
 
 // Data about the application homepage
 const homepage = {
