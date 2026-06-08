@@ -22,7 +22,7 @@ function Resume() {
             <h1>{resume.name}</h1>
             <p>
                 {/* TODO: Not working... is the path wrong? */}
-                <img src="../../resources/linkedin-app-white-icon.webp"/>
+                <img src="../../resources/linkedin-app-white-icon.webp" alt=""/>
                 <a href={resume.linkedin_link}>Find me on Linkedin.</a>
             </p>
             <hr />
